@@ -1,11 +1,11 @@
 // Bulma vars
 @import "~bulma/sass/utilities/_all";
 
-// Buefy vars
-@import "../../../src/scss/utils/_all";
-
 // Docs variables
 @import "_variables";
+
+// Buefy vars
+@import "../../../src/scss/utils/_all";
 
 // Docs elements / components
 @import "_apiview";
