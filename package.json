@@ -1,12 +1,9 @@
 {
-  "name": "buefy",
-  "version": "0.9.8",
+  "name": "@realdecoy/buefy",
+  "version": "0.9.10",
   "homepage": "https://buefy.org",
   "description": "Lightweight UI components for Vue.js based on Bulma",
-  "author": "Rafael Beraldo <rafael.pimpa@gmail.com>",
-  "maintainers": [
-    "Walter Tommasi <tommsi20@gmail.com>"
-  ],
+  "author": "Andre Vidal <avidal@realdecoy.com>",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -19,14 +16,15 @@
   "files": [
     "dist",
     "src",
+    "docs",
     "types/*.d.ts"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/buefy/buefy.git"
+    "url": "https://github.com/realdecoy/buefy.git"
   },
   "bugs": {
-    "url": "https://github.com/buefy/buefy/issues"
+    "url": "https://github.com/realdecoy/buefy/issues"
   },
   "vetur": {
     "tags": "dist/vetur/tags.json",
@@ -50,7 +48,8 @@
     "build:docs": "node build/build.js && copyfiles --flat netlify.toml dist-docs",
     "build": "npm run build:lib && npm run build:docs",
     "cov": "./node_modules/codcov/bin/codcov",
-    "vetur": "node -r esm build/vetur.js"
+    "vetur": "node -r esm build/vetur.js",
+    "deploy": "npm publish"
   },
   "keywords": [
     "bulma",
@@ -167,5 +166,8 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
